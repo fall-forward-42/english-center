@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap');
+.font-main{
+   font-family: 'Oswald', sans-serif; 
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease, background-position 1ms;
+  scroll-behavior: smooth !important;
+
+}
+section{
+  transition: all 0.3s ease, background-position 1ms;
+  scroll-behavior: smooth;  
+}
+:root {
+  --main: C,
+}
+.textHover:hover{
+  color: #020024;
+}
+.fill-white {
+
+filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(188deg) brightness(105%) contrast(101%);
+}
+.bg-single-main{
+  background:   #020024;
+  ;
+
+}
+.bg-single-main2{
+  background:     #1d5b6c
+  ;
+}
+.bg-main{
+  background: rgb(2,0,36);
+background: linear-gradient(142deg, rgba(2,0,36,1) 0%, rgba(23,46,67,1) 30%, rgba(32,101,116,0.9024859943977591) 60%);
+}
+.bg-main-2{
+  background: rgb(2,0,36);
+background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(23,46,67,1) 44%, rgba(32,101,116,0.499124649859944) 85%, rgba(32,101,116,0.48511904761904767) 85%, rgba(32,101,116,0.46551120448179273) 95%);}
+
+.bg-main-gd-l-r{
+  background: rgb(2,0,36);
+  background: linear-gradient(280deg, rgba(2,0,36,1) 0%, rgba(23,46,67,1) 72%, rgba(32,101,116,0.9024859943977591) 99%);
+}
+.text-gradient{
+          /** TEXT GRADIENT */ color: #6e5b3f;
+          background-image: -webkit-linear-gradient(0deg, #6e5b3f 22%, #f8de9e 73%, #60da63 40%);
+           background-clip: text !important; -webkit-background-clip: text !important;
+            color: transparent !important;
+             -webkit-text-fill-color: transparent !important;
+        
+}
+.box-shadow-rounded{
+  box-shadow: 60px -16px teal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.bg-radial{
+  background: rgb(216,231,231);
+  background: linear-gradient(180deg, rgba(216,231,231,1) 50%, rgba(48,48,78,1) 68%, rgba(43,42,73,1) 82%, rgba(2,0,36,1) 100%);}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .zoom {
+    transition: all 0.3s ease-in-out, background-position 1ms;
+    margin: 0 auto;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .zoom:hover {
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  
